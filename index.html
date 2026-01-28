@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch Quảng Ninh - Di sản thế giới</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="tourModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Đăng Ký Tư Vấn Tour</h2>
+        <form id="booking-form">
+            <input type="text" placeholder="Họ và tên" required>
+            <input type="email" placeholder="Email liên hệ" required>
+            <select>
+                <option value="halong">Tour Vịnh Hạ Long</option>
+                <option value="yentu">Tour Yên Tử</option>
+                <option value="mongcai">Tour Bảo Tàng Quảng Ninh</option>
+            </select>
+            <button type="submit" class="btn-main">Gửi yêu cầu</button>
+        </form>
+    </div>
+</div>
+<body>
+    <nav class="navbar">
+        <div class="logo">Quảng Ninh <span>Travel</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#destinations">Điểm đến</a></li>
+            <li><a href="#about">Về chúng tôi</a></li>
+            <li><a href="#" class="btn-contact">Đặt tour</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Khám Phá Kỳ Quan Đất Rồng</h1>
+    <p>Trải nghiệm vẻ đẹp hùng vĩ của Vịnh Hạ Long và sự linh thiêng của Yên Tử.</p>
+    <a href="#destinations" class="btn-main">Xem ngay</a>
+  </div>
+</header>
+
+
+    <section id="destinations" class="section">
+        <h2 class="section-title">Điểm Đến Nổi Bật</h2>
+        <div class="grid">
+            <div class="card" data-link="halong.html">
+                <button class="card-btn">Xem chi tiết</button>
+                <img src="https://th.bing.com/th/id/R.4b98a83251ac996c91d285c105621841?rik=W7d5yL6GYx5HOw&pid=ImgRaw&r=0" alt="Vịnh Hạ Long">
+                <h3>Vịnh Hạ Long</h3>
+                <p>Di sản thiên nhiên thế giới với hàng ngàn đảo đá vôi kỳ vĩ.</p>
+            </div>
+            <div class="card" data-link="baotang.html">
+                <button class="card-btn">Xem chi tiết</button>
+                <img src="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.15752-9/621854860_1535840404161456_2179489438011036968_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=AiFEJ4p9298Q7kNvwEhkj12&_nc_oc=AdkY2VRU-UBu-ceTDMElewbQWnG9QX0sm1eJNSQ9BXZThtyCKPxCuq6sy5FPeczIFWc&_nc_zt=23&_nc_ht=scontent.fhan5-6.fna&oh=03_Q7cD4QHkgV4DfPaC7TArz3H0kjevgEhGR_KWVT4KXcRfDjjGOQ&oe=69A06250" alt="Bảo tàng Quảng Ninh">
+                <h3>Bảo Tàng Quảng Ninh</h3>
+                <p>Viên ngọc đen bên bờ vịnh với kiến trúc độc đáo.</p>
+            </div>
+            <div class="card" data-link="yentu.html">
+                <button class="card-btn">Xem chi tiết</button>
+                <img src="https://goldencoto.vn/wp-content/uploads/2022/10/chua-yen-tu-3.jpeg" alt="Yên Tử">
+                <h3>Chùa Yên Tử</h3>
+                <p>Vùng đất Phật giáo linh thiêng, nơi tĩnh lặng cho tâm hồn.</p>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Về chúng tôi</h3>
+      <p>
+        Chúng tôi cung cấp nội dung và giải pháp chất lượng,
+        hướng tới giá trị bền vững và trải nghiệm người dùng tốt nhất.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Liên kết nhanh</h3>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Dịch vụ</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Liên hệ</h3>
+      <p>📍 Việt Nam</p>
+      <p>📧 ToiYeuTiengAnh@gmail.com</p>
+      <p>📞 083 6656 883</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 YourWebsite. All rights reserved.
+  </div>
+</footer>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>

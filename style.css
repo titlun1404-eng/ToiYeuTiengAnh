@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { line-height: 1.6; color: #333; }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 24px; font-weight: bold; color: #0077b6; }
+.logo span { color: #00b4d8; }
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { text-decoration: none; color: #333; font-weight: 500; }
+
+/* Hero Section */
+.hero-image {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1559592442-7e18ad73d700?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.btn-main {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #00b4d8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+/* Grid System */
+.section { padding: 50px 10%; }
+.section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-10px); }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card h3 { padding: 15px; }
+.card p { padding: 0 15px 15px; font-size: 14px; }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #023e8a;
+    color: white;
+}
+/* Trạng thái Navbar khi cuộn */
+.navbar.scrolled {
+    background: #023e8a;
+    padding: 10px 10%;
+}
+.navbar.scrolled a, .navbar.scrolled .logo {
+    color: #fff;
+}
+
+/* Style cho Modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#booking-form input, #booking-form select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.footer {
+  background-color: #1f2933;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #374151;
+  padding-top: 15px;
+  color: #9ca3af;
+}
+.hero {
+  position: relative;
+  height: 80vh;
+
+  background-image: url("https://www.angsana.com/_next/image?url=https:%2F%2Fwww.angsana.com%2Fassets%2F2024-10%2Fcac-dia-diem-du-lich-tuyet-dep-o-quang-ninh.jpg&w=2048&q=75"); /* hoặc link ảnh */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* lớp phủ tối */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 600px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+.hero-content {
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+}
+.card {
+  position: relative;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 18px;
+  border: none;
+  background: #00b4d8;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover .card-btn {
+  opacity: 1;
+}
+.card.active {
+  border: 3px solid #00b4d8;
+}
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card {
+  cursor: pointer;
+}
+.breadcrumb {
+  padding: 15px 30px;
+  font-size: 14px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #999;
+}
+
+.breadcrumb .current {
+  color: #333;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .breadcrumb {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+}
+/* ===== HALONG PAGE ===== */
+
+.halong-hero {
+  position: relative;
+  height: 60vh;
+  background-image: url("images/halong.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.halong-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.8);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.halong-content {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.halong-content section {
+  margin-bottom: 40px;
+}
+
+.halong-content h2 {
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.highlight ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlight li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.cta {
+  background: #e0f4ff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.back-home {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.back-home a {
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: 600;
+}
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.exp-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.exp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+/* HERO CHUNG */
+.page-hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Lớp phủ làm nổi chữ */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Chữ nổi */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.8);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.halong-bg {
+  background-image: url("https://tse1.mm.bing.net/th/id/OIP.T9NCkB7PeWIyPQ9JH6QguwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3");
+}
+.baotang-bg {
+  background-image: url("https://tripmap.vn/wp-content/uploads/2020/09/bao-tang-quang-ninh-1617952214705.jpg");
+}
+.yentu-bg {
+  background-image: url("https://goldencoto.vn/wp-content/uploads/2022/10/chua-yen-tu-3.jpeg");
+}
+.hero-text {
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-text {
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+

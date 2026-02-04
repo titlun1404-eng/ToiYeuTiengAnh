@@ -3,13 +3,29 @@
 ========================= */
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
   if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
 });
+const galleryImgs = document.querySelectorAll('.gallery-grid img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+if (lightbox && lightboxImg) {
+  document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    });
+  });
 
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+}
 /* =========================
    2. Modal đặt tour
 ========================= */
@@ -94,16 +110,8 @@ cards.forEach(card => {
     }
   });
 });
-const galleryImgs = document.querySelectorAll('.gallery-grid img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
 
-galleryImgs.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
-  });
-});
+
 
 lightbox.addEventListener('click', () => {
   lightbox.style.display = 'none';
@@ -118,3 +126,6 @@ if (
 ) {
   document.getElementById('tourModal').style.display = 'block';
 }
+// LIGHTBOX - PHÓNG TO ẢNH
+
+

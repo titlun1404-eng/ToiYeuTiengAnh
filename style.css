@@ -510,6 +510,13 @@ footer {
     transform: translateY(0);
   }
 }
+.amthuc-bg {
+  background-image: url("https://tse1.mm.bing.net/th/id/OIP.d0HY6WjniWcm7fpJls19PAHaFj?rs=1&pid=ImgDetMain&o=7&rm=3");
+}
+.hatthen-bg {
+  background-image: url("https://th.bing.com/th/id/R.5d9ed7ec8e9d99a2caf474fcd047da4b?rik=qG2fZSBaVzatpg&pid=ImgRaw&r=0");
+}
+
 
 
 
